@@ -19,27 +19,7 @@ $stmt->bind_param("i", $landlord_id);
 $stmt->execute();
 $result = $stmt->get_result();
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Landlord Bookings - RentEase</title>
-    <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="bg-light">
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-        <a class="navbar-brand" href="home_landlord.php">RentEase</a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a href="home_landlord.php" class="nav-link text-white">Dashboard</a></li>
-                <li class="nav-item"><a href="../auth/logout.php" class="nav-link text-white">Logout</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<?php require_once("../includes/header.php"); ?>
 
 <div class="container mt-5">
     <h3>Booking Requests</h3>
@@ -85,5 +65,4 @@ $result = $stmt->get_result();
         <div class="alert alert-info">No booking requests found.</div>
     <?php endif; ?>
 </div>
-</body>
-</html>
+<?php require_once("../includes/footer.php"); ?>

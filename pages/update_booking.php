@@ -84,13 +84,14 @@ if ($notifyResult->num_rows > 0) {
 
     // Only send notification if a Telegram chat id is available
     if ($chat_id) {
-        $telegram_token = '7915188956:AAFSjuTYrvsZGzbo10sFfA5Xi2OahyY24HQ'; // Replace with your bot token
-        $telegram_url = "https://api.telegram.org/bot{$telegram_token}/sendMessage";
+        $telegram_token = getenv('TELEGRAM_TOKEN') ?: '7915188956:AAFSjuTYrvsZGzbo10sFfA5Xi2OahyY24HQ';
+        if ($telegram_token) {
+            $telegram_url = "https://api.telegram.org/bot{$telegram_token}/sendMessage";
 
-        $postData = http_build_query([
-            'chat_id' => $chat_id,
-            'text'    => $message,
-        ]);
+            $postData = http_build_query([
+                'chat_id' => $chat_id,
+                'text'    => $message,
+            ]);
 
         $options = [
             'http' => [

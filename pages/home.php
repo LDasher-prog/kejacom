@@ -5,28 +5,7 @@ require_once("../includes/db_connect.php");
 $user_name = $_SESSION['user_name'];
 $user_role = $_SESSION['user_role'];
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Dashboard - Shika Keja.Com</title>
-    <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="bg-light">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
-        <div class="container">
-            <a class="navbar-brand" href="home.php">Shika Keja.Com</a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a href="../auth/logout.php" class="nav-link text-white">Logout</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<?php require_once("../includes/header.php"); ?>
 
     <!-- Welcome Section -->
     <div class="container mt-5">
@@ -78,5 +57,4 @@ $user_role = $_SESSION['user_role'];
             <?php endif; ?>
         </div>
     </div>
-</body>
-</html>
+<?php require_once("../includes/footer.php"); ?>

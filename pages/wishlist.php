@@ -35,28 +35,7 @@ if (!empty($wishlistIds)) {
     }
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>My Wishlist - RentEase</title>
-    <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="bg-light">
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-        <a class="navbar-brand" href="home.php">RentEase</a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a href="available_rentals.php" class="nav-link text-white">Browse Rentals</a></li>
-                <li class="nav-item"><a href="booking_status.php" class="nav-link text-white">Bookings</a></li>
-                <li class="nav-item"><a href="../auth/logout.php" class="nav-link text-white">Logout</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<?php require_once("../includes/header.php"); ?>
 
 <div class="container mt-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
@@ -95,5 +74,4 @@ if (!empty($wishlistIds)) {
         </div>
     <?php endif; ?>
 </div>
-</body>
-</html>
+<?php require_once("../includes/footer.php"); ?>

@@ -53,17 +53,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Book House - RentEase</title>
-    <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="bg-light">
+<?php require_once("../includes/header.php"); ?>
 <div class="container mt-5">
-    <a href="available_rentals.php" class="btn btn-sm btn-secondary mb-3">← Back to Listings</a>
+    <a href="/pages/available_rentals.php" class="btn btn-sm btn-secondary mb-3">← Back to Listings</a>
 
     <div class="card shadow">
         <div class="row g-0">
@@ -106,5 +98,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </div>
     </div>
 </div>
-</body>
-</html>
+<?php require_once("../includes/footer.php"); ?>
