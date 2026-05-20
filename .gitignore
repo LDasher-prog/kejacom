@@ -1,0 +1,28 @@
+# Ignore environment and OS files
+.env
+*.env
+*.log
+*.tmp
+*.cache
+.DS_Store
+Thumbs.db
+
+# Ignore IDE/editor folders
+.vscode/
+.idea/
+
+# Ignore dependency folders
+node_modules/
+vendor/
+
+# Ignore runtime and backup files
+*.bak
+*~
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore temporary and backup files
+*.swp
+*.swo
